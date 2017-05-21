@@ -17,11 +17,11 @@
         "properties": {
           "type": { "type": "string", "enum": ["object"] },
           "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
-          "requiredProperties": { "type": "array", "items": { "type": "string" } },
+          "required": { "type": "array", "items": { "type": "string" } },
           "additionalProperties": { "type": "boolean" }
         },
         "additionalProperties": false,
-        "requiredProperties": ["type", "properties", "requiredProperties", "additionalProperties"]
+        "required": ["type", "properties", "required", "additionalProperties"]
       },
       "arrayType": {
         "type": "object",
@@ -30,7 +30,7 @@
           "items": { "$ref": "#/definitions/muesliType" }
         },
         "additionalProperties": false,
-        "requiredProperties": ["type", "items"]
+        "required": ["type", "items"]
       },
       "numberType": {
         "type": "object",
@@ -38,7 +38,7 @@
           "type": { "type": "string", "enum": ["number"] }
         },
         "additionalProperties": false,
-        "requiredProperties": ["type"]
+        "required": ["type"]
       },
       "stringType": {
         "type": "object",
@@ -46,7 +46,7 @@
           "type": { "type": "string", "enum": ["string"] }
         },
         "additionalProperties": false,
-        "requiredProperties": ["type"]
+        "required": ["type"]
       },
       "booleanType": {
         "type": "object",
@@ -54,7 +54,7 @@
           "type": { "type": "string", "enum": ["boolean"] }
         },
         "additionalProperties": false,
-        "requiredProperties": ["type"]
+        "required": ["type"]
       }
   },
   "type": "object",
@@ -63,10 +63,10 @@
     "title": { "type": "string" },
     "type": { "type": "string", "enum": ["object"] },
     "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
-    "requiredProperties": { "type": "array", "items": { "type": "string" } },
+    "required": { "type": "array", "items": { "type": "string" } },
     "additionalProperties": { "type": "boolean" }
   },
   "additionalProperties": false,
-  "requiredProperties": ["title", "type", "properties", "requiredProperties", "additionalProperties"]
+  "required": ["title", "type", "properties", "required", "additionalProperties"]
 }
 

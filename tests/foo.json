@@ -7,5 +7,5 @@
     }
   },
   "additionalProperties": false,
-  "requiredProperties": ["bar"]
+  "required": ["bar"]
 }
