@@ -1,0 +1,11 @@
+{
+  "title": "Optional Foo",
+  "type": "object",
+  "properties": {
+    "foo": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "requiredProperties": []
+}
