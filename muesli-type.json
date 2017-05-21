@@ -59,6 +59,7 @@
   },
   "type": "object",
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "title": { "type": "string" },
     "type": { "type": "string", "enum": ["object"] },
     "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
