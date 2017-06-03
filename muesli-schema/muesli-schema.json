@@ -59,13 +59,12 @@
   "type": "object",
   "properties": {
     "$schema": { "type": "string", "format": "uri" },
-    "title": { "type": "string" },
     "type": { "type": "string", "enum": ["object"] },
     "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
     "required": { "type": "array", "items": { "type": "string" } },
     "additionalProperties": { "type": "boolean" }
   },
   "additionalProperties": false,
-  "required": ["title", "type", "properties", "required", "additionalProperties"]
+  "required": ["type", "properties", "required", "additionalProperties"]
 }
 
