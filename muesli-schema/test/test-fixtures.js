@@ -8,7 +8,6 @@ const ajv = new Ajv();
 
 valid_schemas = [
   {
-    title: 'Empty Object',
     type: 'object',
     properties: {
     },
@@ -16,7 +15,6 @@ valid_schemas = [
     additionalProperties: false,
   },
   {
-    title: 'Simple Object',
     type: 'object',
     properties: {
       foo: { type: 'string' },
@@ -25,7 +23,6 @@ valid_schemas = [
     additionalProperties: false,
   },
   {
-    title: 'Optional Properties',
     type: 'object',
     properties: {
       foo: { type: 'string' },
@@ -34,7 +31,6 @@ valid_schemas = [
     additionalProperties: false,
   },
   {
-    title: 'Nested Object with root Title',
     type: 'object',
     properties: {
       foo: {
@@ -53,11 +49,10 @@ valid_schemas = [
 
 invalid_schemas = [
   {},
-  { title: 'Missing type' },
-  { title: 'Invalid type', type: 'string' },
-  { title: 'Missing properties', type: 'object' },
-  { title: 'Missing required', type: 'object', properties: {} },
-  { title: 'Missing additionalProperties', type: 'object', properties: {}, required: []},
+  { type: 'string' },
+  { type: 'object' },
+  { type: 'object', properties: {} },
+  { type: 'object', properties: {}, required: []},
 ];
 
 valid_schemas.forEach(json_schema => {
