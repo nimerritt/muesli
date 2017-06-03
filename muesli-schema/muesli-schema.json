@@ -1,0 +1,71 @@
+{
+  "id": "https://raw.githubusercontent.com/nimerritt/muesli/master/muesli-type.json",
+  "title": "Core schema meta-schema",
+  "definitions": {
+      "muesliType": {
+        "oneOf": [
+          { "$ref": "#/definitions/objectType" },
+          { "$ref": "#/definitions/arrayType" },
+          { "$ref": "#/definitions/numberType" },
+          { "$ref": "#/definitions/booleanType" },
+          { "$ref": "#/definitions/stringType" }
+        ]
+      },
+      "objectType": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["object"] },
+          "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
+          "required": { "type": "array", "items": { "type": "string" } },
+          "additionalProperties": { "type": "boolean" }
+        },
+        "additionalProperties": false,
+        "required": ["type", "properties", "required", "additionalProperties"]
+      },
+      "arrayType": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["array"] },
+          "items": { "$ref": "#/definitions/muesliType" }
+        },
+        "additionalProperties": false,
+        "required": ["type", "items"]
+      },
+      "numberType": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["number"] }
+        },
+        "additionalProperties": false,
+        "required": ["type"]
+      },
+      "stringType": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["string"] }
+        },
+        "additionalProperties": false,
+        "required": ["type"]
+      },
+      "booleanType": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["boolean"] }
+        },
+        "additionalProperties": false,
+        "required": ["type"]
+      }
+  },
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "type": { "type": "string", "enum": ["object"] },
+    "properties": { "type": "object", "additionalProperties": { "$ref": "#/definitions/muesliType" } },
+    "required": { "type": "array", "items": { "type": "string" } },
+    "additionalProperties": { "type": "boolean" }
+  },
+  "additionalProperties": false,
+  "required": ["title", "type", "properties", "required", "additionalProperties"]
+}
+
