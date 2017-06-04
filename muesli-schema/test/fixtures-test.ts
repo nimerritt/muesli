@@ -1,12 +1,10 @@
 import { MuesliSchema } from '../muesli-schema';
 import { JSONSchema4 } from '@types/json-schema';
+import { expect } from 'chai';
+import * as Ajv from 'ajv';
 
-const chai = require('chai');
-const { expect } = chai;
+const  muesli_schema = require('../muesli-schema.json');
 
-const muesli_schema = require('../muesli-schema.json');
-
-const Ajv = require('ajv');
 const ajv = new Ajv();
 
 const valid_schemas: Array<MuesliSchema> = [

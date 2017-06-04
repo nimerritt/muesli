@@ -1,4 +1,4 @@
 --reporter tap 
---compilers ts:ts-node
+--compilers ts:ts-node/register
 --recursive
 
