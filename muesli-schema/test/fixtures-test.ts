@@ -1,3 +1,6 @@
+import { MuesliSchema } from '../muesli-schema';
+import { JSONSchema4 } from '@types/json-schema';
+
 const chai = require('chai');
 const { expect } = chai;
 
@@ -6,7 +9,7 @@ const muesli_schema = require('../muesli-schema.json');
 const Ajv = require('ajv');
 const ajv = new Ajv();
 
-valid_schemas = [
+const valid_schemas: Array<MuesliSchema> = [
   {
     type: 'object',
     properties: {
@@ -47,7 +50,7 @@ valid_schemas = [
   },
 ];
 
-invalid_schemas = [
+const invalid_schemas: Array<JSONSchema4> = [
   {},
   { type: 'string' },
   { type: 'object' },

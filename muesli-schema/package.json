@@ -9,8 +9,12 @@
   "author": "Nicholas Merritt",
   "license": "ISC",
   "devDependencies": {
+    "@types/json-schema": "4.0.0",
+    "@types/mocha": "2.2.41",
     "ajv": "5.1.5",
     "chai": "4.0.1",
-    "mocha": "3.4.2"
+    "mocha": "3.4.2",
+    "ts-node": "3.0.4",
+    "typescript": "2.3.4"
   }
 }
