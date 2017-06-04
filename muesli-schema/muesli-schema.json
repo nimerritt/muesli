@@ -1,5 +1,4 @@
 {
-  "id": "https://raw.githubusercontent.com/nimerritt/muesli/master/muesli-type.json",
   "title": "Core schema meta-schema",
   "definitions": {
       "muesliType": {

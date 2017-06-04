@@ -1,5 +1,3 @@
-import { JSONSchema4 } from '@types/json-schema';
-
 export type MuesliNode = MuesliString | MuesliNumber | MuesliArray | MuesliObject;
 
 export interface MuesliString {
