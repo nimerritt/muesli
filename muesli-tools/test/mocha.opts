@@ -1,0 +1,4 @@
+--reporter tap
+--recursive
+--compilers ts:ts-node
+

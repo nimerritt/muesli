@@ -1,0 +1,20 @@
+{
+  "name": "@nimerritt/muesli-tools",
+  "version": "0.0.1",
+  "description": "Tools for generating code from Muesli-Schemas",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Nicholas Merritt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "2.2.41",
+    "mocha": "3.4.2",
+    "ts-node": "3.0.4",
+    "typescript": "2.3.4"
+  }
+}

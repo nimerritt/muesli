@@ -2,8 +2,13 @@
   "name": "@nimerritt/muesli-schema",
   "version": "0.0.1",
   "description": "A healthy subset of JSON-schema without all the sugar.",
-  "main": "index.js",
+  "files": [
+    "./muesli-schema.json"
+  ],
+  "types": "./build/muesli-schema.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
     "test": "mocha"
   },
   "author": "Nicholas Merritt",

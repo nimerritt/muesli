@@ -1,25 +1,25 @@
 import { JSONSchema4 } from '@types/json-schema';
 
-type MSNode = MSString | MSNumber | MSArray | MSObject;
+export type MuesliNode = MuesliString | MuesliNumber | MuesliArray | MuesliObject;
 
-interface MSString {
+export interface MuesliString {
   type: 'string';
 }
 
-interface MSNumber {
+export interface MuesliNumber {
   type: 'number';
 }
 
-interface MSArray {
+export interface MuesliArray {
   type: 'array';
-  items: MSNode;
+  items: MuesliNode;
 }
 
-interface MSObject {
+export interface MuesliObject {
   type: 'object';
-  properties: {[name: string]: MSNode };
+  properties: {[name: string]: MuesliNode };
   required: Array<string>;
   additionalProperties: false;
 }
 
-export type MuesliSchema = MSObject;
+export type MuesliSchema = MuesliObject;
